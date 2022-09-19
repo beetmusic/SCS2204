@@ -28,7 +28,7 @@ object Q4{
 
 		
 		def neg(list:Array[Account])={
-		
+		    println("Negative Balance")
 			var i = list(0)
 			
 			for(i <- list) {
@@ -57,26 +57,23 @@ object Q4{
 			var i = list(0)
 			
 			println("\n Intrest")
+
 			for(i <- list) {
 				var temp=i.balance
 				var intr:Double=0
 				if(temp<0)
 					
-					intr=temp*(0.05/100)
+					intr=temp*0.05
 				else
-					intr=temp*(0.1/100)
-				
+					intr=temp*0.1
+					
 				i.balance=i.balance+intr	
 				println(i)
-			} 
-			
-		
+			}
+				
 		}
 		
-		
 		override def toString = accountNo+"->  "+balance+" LKR"
-		
-		
 
 	}
 
